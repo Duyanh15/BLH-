@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mentor - Future of AI Graphics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .content {
+            max-width: 600px;
+        }
+
+        .content h1 {
+            font-size: 64px;
+            font-weight: bold;
+        }
+
+        .content h1 span {
+            color: #5a49f8;
+        }
+
+        .content p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background-color: #5a49f8;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #3a2fc5;
+        }
+
+        .social-icons {
+            position: fixed;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .social-icons a {
+            display: block;
+            margin: 10px 0;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background: #5a49f8;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #3a2fc5;
+        }
+
+        .image-section {
+            flex: 1;
+            text-align: right;
+        }
+
+        .image-section img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .iframe-container {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 80%;
+            height: 500px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header style="padding: 20px; display: flex; justify-content: space-between; align-items: center;">
+        <h2 style="color: #5a49f8;">AiMentor</h2>
+        <nav>
+            <a href="file:///E:/Downloads/BLH%C4%90/kh%C3%A1i%20ni%E1%BB%87m.html" id="home-link" style="margin: 0 15px; color: white; text-decoration: none;">Home</a>
+            <a href="#" id="about-link" style="margin: 0 15px; color: white; text-decoration: none;">About</a>
+            <a href="#" id="pricing-link" style="margin: 0 15px; color: white; text-decoration: none;">Pricing</a>
+            <a href="#" id="services-link" style="margin: 0 15px; color: white; text-decoration: none;">Services</a>
+            <a href="#" class="btn">Get Started</a>
+        </nav>
+    </header>
+
+    <div class="container" id="main-content">
+        <div class="content">
+            <h1>The <span>Future</span> in AI Graphic Generator</h1>
+            <p>An Active OpenAI Token is Essential for Image Generation</p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+        <div class="image-section">
+            <img src="https://source.unsplash.com/600x400/?technology,ai" alt="AI Image">
+        </div>
+    </div>
+
+    <div class="iframe-container">
+        <iframe id="content-frame" src="subpage.html"></iframe>
+    </div>
+
+    <div class="social-icons">
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+        <a href="#"><i class="fas fa-comments"></i></a>
+    </div>
+
+    <script>
+        function loadContent(page) {
+            document.getElementById("content-frame").src = page;
+        }
+
+        document.getElementById("home-link").addEventListener("click", function(event) {
+            event.preventDefault();
+            loadContent("subpage.html");
+        });
+
+        document.getElementById("about-link").addEventListener("click", function(event) {
+            event.preventDefault();
+            loadContent("about.html");
+        });
+
+        document.getElementById("pricing-link").addEventListener("click", function(event) {
+            event.preventDefault();
+            loadContent("pricing.html");
+        });
+
+        document.getElementById("services-link").addEventListener("click", function(event) {
+            event.preventDefault();
+            loadContent("services.html");
+        });
+    </script>
+</body>
+</html>
